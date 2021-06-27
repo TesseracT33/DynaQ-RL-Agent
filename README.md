@@ -1,2 +1,5 @@
 # DynaQ-RL-Agent
- A reinforcement learning agent based on the Gym toolkit using the Dyna-Q algorithm
+A reinforcement learning agent based on the Gym toolkit using the Dyna-Q algorithm. Aside from the Dyna-Q algorithm, it utilizes double Q-learning for updating the state-action values, multi-step returns for faster learning, and an epsilon-greedy behaviour policy where epsilon is appropriately reduced over time. The model is a table lookup model with prioritized sampling.
+
+# How to use
+The 'gym' toolkit is required (argparse, importlib, numpy, matplotlib and pandas is also used). Given this, the agent can be ran on a specified environment ('FrozenLake-v0') is a supplied example) by simply running 'run_experiment.py'. The moving average reward that the agent accumulates over a time window of 200 time steps will then also be plotted, averaged over five separate runs. A 95 % confidence interval of this average is also plotted.
